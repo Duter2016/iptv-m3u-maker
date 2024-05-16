@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import tools
@@ -8,7 +8,8 @@ import re
 import json
 import os
 from plugins import base
-# from plugins import lista
+from plugins import lista
+from plugins import listc
 from plugins import listb
 from plugins import dotpy
 
@@ -29,8 +30,14 @@ class Iptv (object):
         Dotpy = dotpy.Source()
         Dotpy.getSource()
 
+        listA = lista.Source()
+        listA.getSource()
+
         listB = listb.Source()
         listB.getSource()
+
+        listC = listc.Source()
+        listC.getSource()
 
         self.outPut()
         self.outJson()
